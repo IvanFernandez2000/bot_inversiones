@@ -1,13 +1,11 @@
-
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from telegram import Bot
 from dotenv import load_dotenv
 import os
+import asyncio
 
-# Cargar las variables de entorno desde el archivo .env
+# Cargar variables de entorno
 load_dotenv()
-
-# Acceder al token desde la variable de entorno
 TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 app = Flask(__name__)
@@ -15,10 +13,15 @@ bot = Bot(token=TOKEN)
 
 @app.route('/', methods=['POST'])
 def webhook():
-    update = request.get_json()
-    chat_id = update['message']['chat']['id']
-    bot.send_message(chat_id, '¡Hola! Bot en funcionamiento.')
-    return 'OK'
+    if request.is_json:  # Verificar si la solicitud es JSON
+        update = request.get_json()  # Leer el JSON
+        print(update)  # Verificar en consola
+        if 'message' in update:
+            chat_id = update['message']['chat']['id']
+            asyncio.run(bot.send_message(chat_id, '¡Hola! Bot en funcionamiento.'))
+        return jsonify({'status': 'OK'}), 200  # Respuesta JSON
+
+    return jsonify({'error': 'Unsupported Media Type'}), 415  # Error si no es JSON
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=5001, host='0.0.0.0', debug=True)
