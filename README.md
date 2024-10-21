@@ -8,31 +8,27 @@ Bot de Telegram para consultar y monitorear en tiempo real el estado de acciones
 - Flask y python-telegram-bot (se instalan como dependencias)  
 
 ## Instalación  
-1. Clona el repositorio:  
+1. Clona el repositorio:
    ```
-   bash
    git clone https://github.com/tu-usuario/telegram-bot-activos.git
    cd telegram-bot-activos
-    ```
+   ```
 2.	Crea y activa un entorno virtual:
    ```
-python -m venv venv  
-source venv/bin/activate  # Linux/Mac  
-venv\Scripts\activate     # Windows  
-```
-
+   python -m venv venv  
+   source venv/bin/activate  # Linux/Mac  
+   venv\Scripts\activate     # Windows  
+   ```
 3.	Instala las dependencias:
-```
-pip install -r requirements.txt
-
-```
+   ```
+   pip install -r requirements.txx
+   ```
 4.	Crea un archivo .env con tu token:
-```
-TELEGRAM_TOKEN=tu_token
-```
-
+   ```
+   TELEGRAM_TOKEN=tu_token
+   ```
 5.	Corre el bot:
-```
-python bot.py
-```
+   ```
+   python bot.py
+   ```
 
