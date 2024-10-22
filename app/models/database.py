@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from config import DATABASE_URI, DEBUG
 from app.models.assets import Base  # Importa Base desde el archivo de modelos
 
+print(DATABASE_URI)
 # Configuración del ORM y base de datos
 engine = create_engine(DATABASE_URI, echo=True)  # echo=True para ver consultas en consola (modo debug)
 
