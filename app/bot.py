@@ -3,6 +3,10 @@ from telegram import Bot
 from dotenv import load_dotenv
 import os
 import asyncio
+from app.models.database import init_db
+
+# Inicializa las tablas al iniciar la aplicación
+init_db()
 
 # Cargar variables de entorno
 load_dotenv()
