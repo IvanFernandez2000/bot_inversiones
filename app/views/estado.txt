@@ -1,0 +1,15 @@
+📈 **Estado de tus Activos:**
+
+1. **[Nombre del Activo]** (Ticker: [Ticker])
+   - 💲 **Precio Actual:** [Precio Actual]
+   - 📊 **Cambio Diario:** [Cambio Porcentual]%
+   - 📉 **Variación Semanal:** [Variación Semanal]%
+   
+2. **[Nombre del Activo]** (Ticker: [Ticker])
+   - 💲 **Precio Actual:** [Precio Actual]
+   - 📊 **Cambio Diario:** [Cambio Porcentual]%
+   - 📉 **Variación Semanal:** [Variación Semanal]%
+
+🔍 Para más detalles de un activo específico, usa `/detalles [Ticker]`.
+
+💡 **Valor Total del Portafolio:** [Valor Total] 
