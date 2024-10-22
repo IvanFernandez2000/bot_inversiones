@@ -1,16 +1,11 @@
 from flask import Flask, request, jsonify
 from telegram import Bot
-from dotenv import load_dotenv
-import os
 import asyncio
 from app.models.database import init_db
+from config import TOKEN
 
 # Inicializa las tablas al iniciar la aplicación
 init_db()
-
-# Cargar variables de entorno
-load_dotenv()
-TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 app = Flask(__name__)
 bot = Bot(token=TOKEN)

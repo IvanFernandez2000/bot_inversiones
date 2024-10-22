@@ -1,0 +1,10 @@
+👋 ¡Hola, [Nombre del Usuario]! Bienvenido al Bot de Seguimiento de Activos 📊.
+
+🔹 Usa los siguientes comandos para gestionar y consultar tus activos:
+- `/estado` - Consulta el estado actual de tus activos.
+- `/agregar` - Añade un nuevo activo a tu portafolio.
+- `/eliminar` - Elimina un activo de tu portafolio.
+- `/alertas` - Configura alertas personalizadas.
+- `/ayuda` - Muestra este menú de ayuda.
+
+¡Empecemos a monitorear tus inversiones!
